@@ -1,74 +1,47 @@
-import React from "react";
-
-const classesSchedule = [
-  { time: "08:00 AM", class: "Vinyasa Flow", instructor: "Alice Smith" },
-  { time: "10:00 AM", class: "Hatha Yoga", instructor: "John Doe" },
-  { time: "12:00 PM", class: "Restorative Yoga", instructor: "Maria Lee" },
-  { time: "02:00 PM", class: "Power Yoga", instructor: "David Kim" },
-  { time: "04:00 PM", class: "Yin Yoga", instructor: "Sara Patel" },
-];
+import React from 'react';
+import Card from '../components/Card';
 
 export default function Classes() {
+  const classes = [
+    {
+      image: '/assets/morning-flow.jpg',
+      title: 'Morning Flow',
+      subtitle: 'Monday · 7:00 AM',
+      description: 'Start your week with energy and mindfulness.',
+      instructor: 'Anna Lee',
+    },
+    {
+      image: '/assets/power-yoga.jpg',
+      title: 'Power Yoga',
+      subtitle: 'Wednesday · 6:00 PM',
+      description: 'Build strength and flexibility with dynamic sequences.',
+      instructor: 'Ravi Kumar',
+    },
+    {
+      image: '/assets/restorative.jpg',
+      title: 'Restorative Yoga',
+      subtitle: 'Friday · 5:00 PM',
+      description: 'Relax, release tension, and restore balance.',
+      instructor: 'Sofia Martinez',
+    },
+  ];
+
   return (
-    <div style={{ maxWidth: 700, margin: "2rem auto", padding: "1rem" }}>
-      <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
-        GreenLeaf Yoga Studio - Classes
-      </h1>
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          marginBottom: "2rem",
-        }}
-      >
-        <thead>
-          <tr style={{ background: "#e8f5e9" }}>
-            <th style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-              Time
-            </th>
-            <th style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-              Class
-            </th>
-            <th style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-              Instructor
-            </th>
-            <th
-              style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}
-            ></th>
-          </tr>
-        </thead>
-        <tbody>
-          {classesSchedule.map((session, idx) => (
-            <tr key={idx} style={{ background: idx % 2 ? "#f1f8e9" : "#fff" }}>
-              <td style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-                {session.time}
-              </td>
-              <td style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-                {session.class}
-              </td>
-              <td style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-                {session.instructor}
-              </td>
-              <td style={{ padding: "0.75rem", border: "1px solid #c8e6c9" }}>
-                <button
-                  style={{
-                    background: "#388e3c",
-                    color: "#fff",
-                    border: "none",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                  }}
-                  disabled
-                  title="Booking coming soon!"
-                >
-                  Book now
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="page">
+      <h1>Class Schedule</h1>
+      <div className="card-grid">
+        {classes.map((yogaClass, index) => (
+          <Card
+            key={index}
+            image={yogaClass.image}
+            title={yogaClass.title}
+            subtitle={yogaClass.subtitle}
+            description={`${yogaClass.description} — Instructor: ${yogaClass.instructor}`}
+          >
+            <button className="btn">Book Now</button>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
