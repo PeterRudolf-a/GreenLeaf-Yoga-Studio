@@ -1,12 +1,17 @@
-# React + Vite
+# GreenLeaf Yoga Studio
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ## Description
+  GreenLeaf Yoga Studio is a fictional demo website built with React + Vite.
+  It showcases a modern small business site with pages for Home, Classes, Instructors, and Contact.
+  The project demonstrates reusable React components, React Router navigation, and styled layouts.
+  ## Table of Contents
+  - [License](#license)
+  - [Questions](#questions)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  ## License
+    This project is licensed under the MIT license.
+  [MIT](https://opensource.org/licenses/MIT)
+  https://drive.google.com/file/d/14xNxGEYKV0bwBsgYrSrOOMUvoan15P93/view?usp=drive_link 
+  ## Questions
+  Link to my GitHub profile: https://github.com/PeterRudolf-a.
+  If you have any questions, you can contact me at peterrudolf249@gmail.com.

@@ -12,8 +12,6 @@ const ContactForm = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    // For Netlify Forms: add data-netlify="true" and a hidden input
-    // For EmailJS: replace with your own EmailJS integration if needed
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");
@@ -40,10 +38,10 @@ const ContactForm = () => {
             method="POST"
             data-netlify="true"
             onSubmit={handleSubmit}
-            style={{ maxWidth: 400, margin: "0 auto" }}
+            className="contact-form"
         >
             <input type="hidden" name="form-name" value="contact" />
-            <h2>Contact Us</h2>
+
             <label>
                 Name
                 <input
@@ -54,7 +52,7 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <br />
+
             <label>
                 Email
                 <input
@@ -65,7 +63,7 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <br />
+
             <label>
                 Message
                 <textarea
@@ -75,9 +73,9 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <br />
+
             <button type="submit">Send</button>
-            <div style={{ marginTop: 10 }}>{status}</div>
+            <div className="status">{status}</div>
         </form>
     );
 };
