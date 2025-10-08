@@ -1,7 +1,9 @@
 import React from 'react';
 
+import backgroundImage from '../assets/yoga-hero-bg.jpg';
+
 const heroStyle = {
-    backgroundImage: 'url("/assets/yoga-hero-bg.jpg")',
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     minHeight: '70vh',
